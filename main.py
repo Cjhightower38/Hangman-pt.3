@@ -22,22 +22,22 @@ print(display)
 end_game = False
 
 while not end_game:
-  guess = input('Please guess a letter\n').lower()
+    guess = input('Please guess a letter\n').lower()
 
 #TODO-2: - Loop through each position in the chosen_word;
 #If the letter at that position matches 'guess' then reveal that letter in the display at that position.
 #e.g. If the user guessed "p" and the chosen word was "apple", then display should be ["_", "p", "p", "_", "_"].
-  for position in range(len(random_word)):
-    words = random_word[position]
-    if guess in words:
-      display[position] = guess
+    for position in range(len(random_word)):
+      words = random_word[position]
+      if guess in words:
+        display[position] = guess
 
 
 #TODO-3: - Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
 #Hint - Don't worry about getting the user to guess the next letter. We'll tackle that in step 3.
-  print(display)
+    print(display)
   
 #Check guessed letter
-  if "_" not in display:
-    end_game = True
-    print("You win!")
+    if "_" not in display:
+      end_game = True
+      print("You win!")
